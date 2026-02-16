@@ -174,7 +174,7 @@ Yoqish usullari:
 
 Quyidagi rasm README da review ko'rinishini ko'rsatadi:
 
-![Review Screenshot](UI.png)
+![Review Screenshot](UI.jpg)
 
 ---
 
