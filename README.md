@@ -172,8 +172,6 @@ Yoqish usullari:
 
 ## Review Screenshot
 
-Quyidagi rasm README da review ko'rinishini ko'rsatadi:
-
 ![Review Screenshot](UI.jpg)
 
 ---
