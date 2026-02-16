@@ -174,11 +174,7 @@ Yoqish usullari:
 
 Quyidagi rasm README da review ko'rinishini ko'rsatadi:
 
-![Review Screenshot](docs/screenshots/review.png)
-
-Eslatma:
-- Screenshot fayl yo'li: `docs/screenshots/review.png`
-- Agar rasm hali yo'q bo'lsa, shu yo'lga qo'ying.
+![Review Screenshot](UI.png)
 
 ---
 
