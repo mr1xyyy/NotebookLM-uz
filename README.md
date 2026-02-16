@@ -175,7 +175,3 @@ Yoqish usullari:
 ![Review Screenshot](UI.jpg)
 
 ---
-
-## Litsenziya
-
-Ichki/loyiha ehtiyoji uchun ishlatish ko‘zda tutilgan. Kerak bo‘lsa alohida LICENSE qo‘shing.
