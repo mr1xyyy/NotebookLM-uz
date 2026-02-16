@@ -1,0 +1,8 @@
+{
+  "name": "Copy of Copy of 4.1",
+  "description": "A powerful research and writing assistant inspired by NotebookLM, allowing users to upload sources and interact with them using Gemini AI.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
