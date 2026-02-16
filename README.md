@@ -155,10 +155,6 @@ Yoqish usullari:
 - Sozlamadan qayta almashtiring.
 - Zarur bo‘lsa bir marta sahifani refresh qiling.
 
-3. Build vaqtida katta chunk warning
-- Bu warning; loyiha baribir build bo‘ladi.
-- Istasangiz keyinroq code-splitting qo‘shish mumkin.
-
 ---
 
 ## Qisqa foydalanish flow
