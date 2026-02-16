@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { X, Check, BarChart3, Sparkles } from 'lucide-react';
-import { InfographicConfig } from '../services/geminiService';
+import { InfographicConfig } from '../services/openRouterService';
 
 interface InfographicSetupModalProps {
   onClose: () => void;
@@ -118,3 +118,4 @@ const InfographicSetupModal: React.FC<InfographicSetupModalProps> = ({ onClose, 
 };
 
 export default InfographicSetupModal;
+

@@ -37,7 +37,7 @@ type OpenRouterMessage = {
   content: any;
 };
 
-export class GeminiService {
+export class OpenRouterService {
   private readonly baseUrl = "https://openrouter.ai/api/v1";
   private readonly textModel = process.env.OPENROUTER_MODEL || "openai/gpt-4o-mini";
   private readonly visionModel = process.env.OPENROUTER_VISION_MODEL || this.textModel;
@@ -610,4 +610,5 @@ ${context}`;
   }
 }
 
-export const geminiService = new GeminiService();
+export const openRouterService = new OpenRouterService();
+

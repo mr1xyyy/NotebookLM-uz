@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { X, Check, Network, Sparkles } from 'lucide-react';
-import { MindMapConfig } from '../services/geminiService';
+import { MindMapConfig } from '../services/openRouterService';
 
 interface MindMapSetupModalProps {
   onClose: () => void;
@@ -87,3 +87,4 @@ const MindMapSetupModal: React.FC<MindMapSetupModalProps> = ({ onClose, onGenera
 };
 
 export default MindMapSetupModal;
+

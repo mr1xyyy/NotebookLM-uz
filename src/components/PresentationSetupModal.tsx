@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { X, Check, MonitorPlay, Sparkles } from 'lucide-react';
-import { PresentationConfig } from '../services/geminiService';
+import { PresentationConfig } from '../services/openRouterService';
 
 interface PresentationSetupModalProps {
   onClose: () => void;
@@ -118,3 +118,4 @@ const PresentationSetupModal: React.FC<PresentationSetupModalProps> = ({ onClose
 };
 
 export default PresentationSetupModal;
+

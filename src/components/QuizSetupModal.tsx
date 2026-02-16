@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { X, Check, HelpCircle, Sparkles } from 'lucide-react';
-import { QuizConfig } from '../services/geminiService';
+import { QuizConfig } from '../services/openRouterService';
 
 interface QuizSetupModalProps {
   onClose: () => void;
@@ -123,3 +123,4 @@ const QuizSetupModal: React.FC<QuizSetupModalProps> = ({ onClose, onGenerate, th
 };
 
 export default QuizSetupModal;
+

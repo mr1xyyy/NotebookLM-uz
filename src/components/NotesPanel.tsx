@@ -344,3 +344,4 @@ const NotesPanel: React.FC<NotesPanelProps> = ({
 };
 
 export default NotesPanel;
+

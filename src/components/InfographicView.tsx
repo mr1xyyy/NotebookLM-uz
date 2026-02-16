@@ -214,3 +214,4 @@ const InfographicView: React.FC<InfographicViewProps> = ({ imageUrl, title, onCl
 };
 
 export default InfographicView;
+

@@ -46,7 +46,7 @@ src/
   types.ts                # Umumiy turlar (types)
   components/             # UI komponentlar
   services/
-    geminiService.ts      # OpenRouter chaqiriqlari, demo logika, promptlar
+    openRouterService.ts  # OpenRouter chaqiriqlari, demo logika, promptlar
 index.html
 vite.config.ts
 tsconfig.json

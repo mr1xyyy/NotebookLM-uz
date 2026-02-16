@@ -18,7 +18,7 @@ import { Source, Note, Message, StudyMaterialType, QuizData, FlashcardData, Mind
 import { 
   BookOpen, HelpCircle, User, Pencil, Settings, KeyRound, Check, FlaskConical
 } from 'lucide-react';
-import { geminiService, AnyAIConfig, InfographicConfig, MindMapConfig } from './services/geminiService';
+import { openRouterService, AnyAIConfig, InfographicConfig, MindMapConfig } from './services/openRouterService';
 
 const App: React.FC = () => {
   const [sources, setSources] = useState<Source[]>([]);
@@ -145,11 +145,11 @@ const App: React.FC = () => {
 
       try {
         const [quiz, flashcard, mindmap, presentation, infographic] = await Promise.all([
-          geminiService.generateStudyMaterial('quiz', [demoSource], { questionCount: 4, difficulty: 'easy', topic: 'Demo review' }),
-          geminiService.generateStudyMaterial('flashcard', [demoSource], { cardCount: 'standard', style: 'qa', topic: 'Demo review' }),
-          geminiService.generateStudyMaterial('mindmap', [demoSource], { complexity: 'standard', topic: 'Demo review' }),
-          geminiService.generateStudyMaterial('presentation', [demoSource], { slideCount: 'short', audience: 'general', topic: 'Demo review' }),
-          geminiService.generateInfographicImage([demoSource], { style: 'minimalist', layout: '16:9', topic: 'Demo review' })
+          openRouterService.generateStudyMaterial('quiz', [demoSource], { questionCount: 4, difficulty: 'easy', topic: 'Demo review' }),
+          openRouterService.generateStudyMaterial('flashcard', [demoSource], { cardCount: 'standard', style: 'qa', topic: 'Demo review' }),
+          openRouterService.generateStudyMaterial('mindmap', [demoSource], { complexity: 'standard', topic: 'Demo review' }),
+          openRouterService.generateStudyMaterial('presentation', [demoSource], { slideCount: 'short', audience: 'general', topic: 'Demo review' }),
+          openRouterService.generateInfographicImage([demoSource], { style: 'minimalist', layout: '16:9', topic: 'Demo review' })
         ]);
 
         if (cancelled) return;
@@ -247,9 +247,9 @@ const App: React.FC = () => {
         let content = analyzingSource.content;
 
         if (analyzingSource.type === 'file' && analyzingSource.base64Data && analyzingSource.mimeType) {
-          content = await geminiService.analyzeMediaSource(analyzingSource.base64Data, analyzingSource.mimeType, analyzingSource.name);
+          content = await openRouterService.analyzeMediaSource(analyzingSource.base64Data, analyzingSource.mimeType, analyzingSource.name);
         } else if (analyzingSource.type === 'link' || analyzingSource.type === 'youtube') {
-          const urlResult = await geminiService.analyzeUrlSource(analyzingSource.content);
+          const urlResult = await openRouterService.analyzeUrlSource(analyzingSource.content);
           title = urlResult.title;
           content = urlResult.content;
         }
@@ -382,9 +382,9 @@ const App: React.FC = () => {
 
       let result: any;
       if (type === 'infographic') {
-        result = await geminiService.generateInfographicImage(activeSources, aiConfig as InfographicConfig);
+        result = await openRouterService.generateInfographicImage(activeSources, aiConfig as InfographicConfig);
       } else {
-        result = await geminiService.generateStudyMaterial(type, activeSources, aiConfig);
+        result = await openRouterService.generateStudyMaterial(type, activeSources, aiConfig);
       }
 
       const newId = Math.random().toString(36).substr(2, 9);
@@ -731,3 +731,4 @@ const App: React.FC = () => {
 };
 
 export default App;
+

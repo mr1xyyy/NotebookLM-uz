@@ -96,3 +96,4 @@ export interface AITask {
   content: string | null;
   status: 'generating' | 'completed';
 }
+

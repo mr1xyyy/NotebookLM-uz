@@ -8,7 +8,7 @@ import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import { Message, Source, Note, ChatConfig } from '../types';
-import { geminiService } from '../services/geminiService';
+import { openRouterService } from '../services/openRouterService';
 
 interface ChatInterfaceProps {
   sources: Source[];
@@ -54,7 +54,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
     setIsLoading(true);
 
     try {
-      const response = await geminiService.chatWithSources(updatedMessages, sources, chatConfig);
+      const response = await openRouterService.chatWithSources(updatedMessages, sources, chatConfig);
       onMessagesChange([...updatedMessages, { id: Date.now().toString(), role: 'assistant', text: response, timestamp: Date.now() }]);
     } catch (err) {
       onMessagesChange([...updatedMessages, { id: Date.now().toString(), role: 'assistant', text: "Xatolik yuz berdi. Iltimos qayta urinib ko'ring.", timestamp: Date.now() }]);
@@ -355,3 +355,4 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
 };
 
 export default ChatInterface;
+

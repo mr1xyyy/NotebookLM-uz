@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { X, Check, CopyPlus, Sparkles } from 'lucide-react';
-import { FlashcardConfig } from '../services/geminiService';
+import { FlashcardConfig } from '../services/openRouterService';
 
 interface FlashcardSetupModalProps {
   onClose: () => void;
@@ -126,3 +126,4 @@ const FlashcardSetupModal: React.FC<FlashcardSetupModalProps> = ({ onClose, onGe
 };
 
 export default FlashcardSetupModal;
+
